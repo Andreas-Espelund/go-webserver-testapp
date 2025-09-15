@@ -8,4 +8,4 @@ jobs:
     uses: Andreas-Espelund/github-workflows/.github/workflows/run-k8s-manifests-validate.yaml@d9217f3a997b77c0d1d6f90683555ffe39be36ea
     with:
       path: env
-      skipctl-version: "v1.3.1"
+      skipctl-version: "v1.4.0"
