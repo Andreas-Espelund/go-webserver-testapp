@@ -5,7 +5,7 @@ on: push
 jobs:
   validate:
     name: validate-k8s-manifests
-    uses: Andreas-Espelund/github-workflows/.github/workflows/run-k8s-manifests-validate.yaml@d9217f3a997b77c0d1d6f90683555ffe39be36ea
+    uses: Andreas-Espelund/github-workflows/.github/workflows/run-k8s-manifests-validate.yaml@3cc9525fe814517c9a51514e252ac39795c4da37
     with:
       path: env
       skipctl-version: "v1.4.0"
