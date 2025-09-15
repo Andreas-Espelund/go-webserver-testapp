@@ -1,4 +1,4 @@
-name: Verify Kubernetes Manifest Validity
+name: Verify Kubernetes Manifest Validityy
 
 on: push
 
