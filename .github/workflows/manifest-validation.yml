@@ -1,0 +1,11 @@
+name: Verify Kubernetes Manifest Validity
+
+on: push
+
+jobs:
+  validate:
+    name: validate-k8s-manifests
+    uses: Andreas-Espelund/github-workflows/.github/workflows/run-k8s-manifests-validate.yaml@170c8dd41fc3f6e8f4a136edb399a948f127fa30
+    with:
+      path: env
+      skipctl-version: "v1.3.1"
