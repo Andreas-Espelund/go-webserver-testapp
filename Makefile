@@ -13,16 +13,13 @@ loaded-image: go-http-server
 	touch loaded-image  # Mark as up-to-date
 
 # 3. Convert Jsonnet to JSON
-app.json: app.jsonnet
-	jsonnet app.jsonnet > app.json
+manifest.json: app.jsonnet
+	jsonnet app.jsonnet > manifest.json
 
-# 4. Remove array
-app.single.json: app.json
-	jq '.[0]' app.json > app.single.json
 
 # 5. Apply everything if main.go (or anything upstream) changes
-apply: loaded-image app.single.json
-	kubectl apply -f app.single.json
+apply: loaded-image manifest.json
+	kubectl apply -n default -f manifest.json
 
 # Utility targets
 run-image:
